@@ -19,25 +19,30 @@ const HeroSection = () => {
             Без ошибок. Без лишних документов. Без головной боли.
           </p>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-white/20">
-            <p className="text-2xl md:text-3xl font-bold text-yellow-300 mb-2">
-              Всего 13 770 ₽
-            </p>
-            <p className="text-lg text-blue-100">
-              Всё сделаем за вас — от настройки до обучения.<br />
-              Успешное подключение гарантируем. Сопровождение 3 месяца.
-            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-8 py-3 text-lg">
+              <Icon name="Phone" className="mr-2" size={20} />
+              Получить консультацию
+            </Button>
+            <Button variant="outline" size="lg" className="border-blue-200 text-blue-100 hover:bg-blue-600 px-8 py-3 text-lg">
+              <Icon name="FileText" className="mr-2" size={20} />
+              Узнать требования
+            </Button>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-8 py-4 text-lg">
-              <Icon name="Phone" className="mr-2" size={20} />
-              Заказать подключение
-            </Button>
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 px-8 py-4">
-              <Icon name="PlayCircle" className="mr-2" size={20} />
-              Как это работает
-            </Button>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-200">
+            <div className="flex items-center">
+              <Icon name="CheckCircle" className="mr-2 text-green-400" size={16} />
+              Опыт 10+ лет
+            </div>
+            <div className="flex items-center">
+              <Icon name="CheckCircle" className="mr-2 text-green-400" size={16} />
+              500+ успешных подключений
+            </div>
+            <div className="flex items-center">
+              <Icon name="CheckCircle" className="mr-2 text-green-400" size={16} />
+              Гарантия результата
+            </div>
           </div>
         </div>
       </div>
