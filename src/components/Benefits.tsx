@@ -4,11 +4,31 @@ import Icon from "@/components/ui/icon";
 
 const Benefits = () => {
   const benefits = [
-    "13 770 ₽ — фиксированная цена, без скрытых платежей",
-    "Поддержка до полного понимания",
-    "Видеоинструкции и документы в подарок",
-    "3 месяца сопровождения после подключения",
-    "100% гарантия подключения или возврат денег",
+    {
+      text: "13 770 ₽ — фиксированная цена, без скрытых платежей",
+      icon: "Banknote",
+      color: "from-green-500 to-emerald-600",
+    },
+    {
+      text: "Поддержка до полного понимания",
+      icon: "Headphones",
+      color: "from-blue-500 to-cyan-600",
+    },
+    {
+      text: "Видеоинструкции и документы в подарок",
+      icon: "Gift",
+      color: "from-purple-500 to-violet-600",
+    },
+    {
+      text: "3 месяца сопровождения после подключения",
+      icon: "Calendar",
+      color: "from-orange-500 to-red-600",
+    },
+    {
+      text: "100% гарантия подключения или возврат денег",
+      icon: "Shield",
+      color: "from-emerald-500 to-teal-600",
+    },
   ];
 
   return (
@@ -24,18 +44,31 @@ const Benefits = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid gap-4 mb-12">
+          <div className="grid gap-6 mb-12">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                  <Icon name="Check" size={20} className="text-white" />
+                <div className="flex items-center gap-6">
+                  <div
+                    className={`flex-shrink-0 w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <Icon
+                      name={benefit.icon}
+                      size={28}
+                      className="text-white"
+                    />
+                  </div>
+                  <span className="text-lg text-gray-700 font-medium flex-1">
+                    {benefit.text}
+                  </span>
+                  <Icon
+                    name="ArrowRight"
+                    size={20}
+                    className="text-gray-400 group-hover:text-blue-500 group-hover:translate-x-1 transition-all duration-300"
+                  />
                 </div>
-                <span className="text-lg text-gray-700 font-medium">
-                  {benefit}
-                </span>
               </div>
             ))}
           </div>
