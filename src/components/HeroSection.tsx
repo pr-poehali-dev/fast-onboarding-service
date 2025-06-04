@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20 overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.05\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -29,28 +29,15 @@ const HeroSection = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Button 
-              size="lg" 
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200"
-            >
-              <Icon name="FileText" className="mr-2" />
-              Оставить заявку
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-8 py-4 text-lg">
+              <Icon name="Phone" className="mr-2" size={20} />
+              Заказать подключение
             </Button>
-            
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-4 text-lg font-semibold rounded-xl transform hover:scale-105 transition-all duration-200"
-            >
-              <Icon name="MessageCircle" className="mr-2" />
-              Написать в WhatsApp
+            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 px-8 py-4">
+              <Icon name="PlayCircle" className="mr-2" size={20} />
+              Как это работает
             </Button>
-          </div>
-          
-          <div className="flex items-center justify-center gap-2 text-green-300">
-            <Icon name="Clock" size={20} />
-            <span className="text-lg">Ответим в течение 15 минут. Консультация бесплатна.</span>
           </div>
         </div>
       </div>
